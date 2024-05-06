@@ -647,7 +647,7 @@ String toCurrencyString(
     if (i < fractionalPart.length) {
       sb.write(fractionalPart[i]);
     } else {
-      sb.write('0');
+      sb.write('');
     }
   }
 
