@@ -101,7 +101,7 @@ class _MoneyFormatPageState extends State<MoneyFormatPage> {
                 ),
                 _getText('Money without a thousand separator'),*/
                 TextFormField(
-                  maxLength: 11,
+                  maxLength: 10,
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
                     hintText: 'Enter a numeric value',
@@ -119,7 +119,6 @@ class _MoneyFormatPageState extends State<MoneyFormatPage> {
                   ),
                   inputFormatters: [
                     CurrencyInputFormatter(
-                      leadingSymbol: CurrencySymbols.DOLLAR_SIGN,
                       thousandSeparator: ThousandSeparator.Comma,
                       useSymbolPadding: false,
                     )
