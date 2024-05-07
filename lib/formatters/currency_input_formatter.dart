@@ -282,9 +282,9 @@ class CurrencyInputFormatter extends TextInputFormatter {
         offset = 1;
       }
       return newValue.copyWith(
-        text: '',
+        text: newAsCurrency,
         selection: TextSelection.collapsed(
-          offset: 0,
+          offset: offset,
         ),
       );
     }

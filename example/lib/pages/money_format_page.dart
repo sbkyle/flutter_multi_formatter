@@ -31,7 +31,7 @@ class _MoneyFormatPageState extends State<MoneyFormatPage> {
             ),
             child: Column(
               children: <Widget>[
-                _getText(
+                /*_getText(
                   'The first field uses no trailing or leading symbols, and no decimal points',
                 ),
                 const SizedBox(
@@ -99,8 +99,9 @@ class _MoneyFormatPageState extends State<MoneyFormatPage> {
                         })
                   ],
                 ),
-                _getText('Money without a thousand separator'),
+                _getText('Money without a thousand separator'),*/
                 TextFormField(
+                  maxLength: 11,
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
                     hintText: 'Enter a numeric value',
@@ -115,17 +116,16 @@ class _MoneyFormatPageState extends State<MoneyFormatPage> {
                   ),
                   keyboardType: TextInputType.numberWithOptions(
                     decimal: true,
-                    signed: true,
                   ),
                   inputFormatters: [
                     CurrencyInputFormatter(
                       leadingSymbol: CurrencySymbols.DOLLAR_SIGN,
-                      thousandSeparator: ThousandSeparator.None,
+                      thousandSeparator: ThousandSeparator.Comma,
                       useSymbolPadding: false,
                     )
                   ],
                 ),
-                _getText('This input adds a EUR sign at the end'),
+                /*_getText('This input adds a EUR sign at the end'),
                 TextFormField(
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
@@ -266,7 +266,7 @@ class _MoneyFormatPageState extends State<MoneyFormatPage> {
                 ),
                 _getText('You can also format a static string value like 123456' +
                     ' to currency string by using toCurrencyString(...) function ' +
-                    'toCurrencyString("123456", leadingSymbol: "\$") -> ${toCurrencyString('123456', leadingSymbol: '\$')}'),
+                    'toCurrencyString("123456", leadingSymbol: "\$") -> ${toCurrencyString('123456', leadingSymbol: '\$')}'),*/
               ],
             ),
           ),
