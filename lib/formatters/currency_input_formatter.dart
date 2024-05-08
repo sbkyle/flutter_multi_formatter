@@ -32,7 +32,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_multi_formatter/flutter_multi_formatter.dart';
 
 final RegExp _mantissaSeparatorRegexp = RegExp(r'[,.]');
-final RegExp _illegalCharsRegexp = RegExp(r'[^0-9-,.]+');
+final RegExp _illegalCharsRegexp = RegExp(r'[^0-9,.]+');
 final RegExp _illegalLeadingOrTrailing = RegExp(r'[-,.+]+');
 
 class CurrencySymbols {
