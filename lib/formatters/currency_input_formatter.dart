@@ -278,13 +278,18 @@ class CurrencyInputFormatter extends TextInputFormatter {
         newValue.text.length,
         initialCaretOffset + 1,
       );
-      if (newValue.text == '') {
-        offset = 1;
+      if (oldValue.text == '0.00' && newValue.text == '.00') {
+        return newValue.copyWith(
+          text: '',
+          selection: TextSelection.collapsed(
+            offset: 0,
+          ),
+        );
       }
       return newValue.copyWith(
-        text: '',
+        text: newAsCurrency,
         selection: TextSelection.collapsed(
-          offset: 0,
+          offset: offset,
         ),
       );
     }
